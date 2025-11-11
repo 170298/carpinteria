@@ -3,10 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --production
 COPY . .
-EXPOSE 3000
-CMD [ "node", "index.js" ]
+EXPOSE 10000
+CMD ["npm", "start"]
 
-git add .
-git commit -m "Desactiva Docker para usar Node.js en Render"
-git push
 
